@@ -51,6 +51,47 @@
         // else {
         //     document.write('Błędna liczba!')
         // }
+                //zad 4
+        // const liczba = prompt('Wymyśl liczbę: ');
+        // const a = prompt('Wprowadź pierwszą liczbę przedziału: ');
+        // const b = prompt('Wprowadź drugą ostatnią liczbę przedziału');
+
+        // if (a > b) {
+        //     if (a >= liczba && b <= liczba) document.write('Liczba jest w tym przedziale!');
+        // } else {
+        //     document.write('Liczba nie jest w tym przedziale!');
+        // } else {
+        //     if (a < b) {
+        //         if (b >= liczba && a <= liczba) document.write('Liczba jest w  w przedziale!');
+        //     } else {
+        //         document.write('Liczba nie jest w przedziale!');
+        //     }
+        //     if (b >= liczba && a <= liczba) document.write('Liczba jest w przedziale');
+        // } else {
+        //     document.write('Liczba nie jest w tym przedziale!')
+        // }
+        //zad 5 
+        // const liczby1 = prompt('Podaj 1 liczbę: ');
+        // const liczby2 = prompt('Podaj 3 liczbę: ');
+        // const liczby3 = prompt('Podaj 4 liczbę: ');
+
+        // if(liczba1<liczba2){
+
+
+
+        // }
+
+        //zad 6 
+        // const a = prompt('Podaj liczbę: ');
+        // const b = prompt('Podaj potęgę: ');
+
+        // if (a % b == 0) {
+        //     document.write('Jest podzielna!')
+        // } else if (a == 0) {
+        //     document.write('Nie wpiusjemy zera dzbanie!')
+        // } else {
+        //     document.write('Nie jest podzielna');
+        // }
 
     </script>
 </body>
