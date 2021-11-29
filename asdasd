@@ -1,0 +1,321 @@
+<!-- <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const h = parseInt(document.querySelector('input[name = "h"]').value);
+        const a = parseInt(document.querySelector('input[name = "a"]').value);
+
+        for(let i = 0; i < h;i++){
+            document.write(`<div style="white-space:pre-wrap">`);
+                for(let j = 0; j < a; j++){
+                    if(i == 0 || i == h-1){
+                        document.write(`*`);
+                    } else{
+                        if(j == 0 || j == a-1){
+                            document.write(`*`);
+                        }else{
+                            document.write(`  `)
+                        }
+                    }
+                }
+            document.write(`</div>`)
+        }
+    });
+</script>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<form>
+    <input type="number" name="l1" placeholder="Podaj pierwszy numer przedziału"/>
+    <input type="number" name="l2" placeholder="Podaj ostatni numer przedziału"/>
+    <button type="submit">Wypisz</button>
+</form>
+<div class="liczby"></div>
+
+<script>
+    const form = document.querySelector('form');
+    const div = document.querySelector('.liczby');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const l1 = parseInt(document.querySelector('input[name="l1"]').value);
+        const l2 = parseInt(document.querySelector('input[name="l2"]').value);
+        let num = "";
+
+        for(let i = l1; i <= l2; i++){
+            if(i%5 == 0){
+                num+= i + ", ";
+            }
+        }
+        div.textContent= `Liczby z przedziału od ${l1} do ${l2} podzielne przez 5 to: ${num}`;
+    });
+</script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<form action="" method="GET">
+    <input type="number" name="liczba1" placeholder="liczba1"/>
+    <input type="number" name="liczba2" placeholder="liczba2"/>
+    <button type="submit">Oblicz NWD</button>
+</form>
+
+<div class="wynik"></div>
+
+<script>
+    const form = document.querySelector('form');
+    const div = document.querySelector('.wynik');
+    form.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        let liczba1 = document.querySelector('input[name="liczba1"]').value * 1;
+        let liczba2 = document.querySelector('input[name="liczba2"]').value * 1;
+
+        while(liczba1 != liczba2){
+            if(liczba1 > liczba2){
+                liczba1 = liczba1 - liczba2;
+            }
+            else{
+                liczba2 = liczba2 - liczba1;
+            }
+        }
+        div.textContent = `NWD wynosi: ${liczba1}`;
+    });
+    
+</script>
+
+
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<form>
+    <input type="number" name="n" placeholder="Podaj n"/>
+    <button type="submit">Wylicz</button>
+</form>
+<div></div>
+
+<script>
+    const form = document.querySelector('form');
+    const div = document.querySelector('div');
+    let s = 1;
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const n = parseInt(document.querySelector('input[name="n"]').value);
+        for(let i = 1; i <= n;i++){
+            s *=i;
+        }
+        div.textContent = `Silnia dla n = ${n} jest równa ${s}`;
+    });
+</script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<form>
+    <input type="number" name="l1" placeholder="Podaj pierwszy numer przedziału"/>
+    <input type="number" name="l2" placeholder="Podaj ostatni numer przedziału"/>
+    <button type="submit">Wypisz</button>
+</form>
+<div class="liczby"></div>
+
+<script>
+    const form = document.querySelector('form');
+    const div = document.querySelector('.liczby');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const l1 = parseInt(document.querySelector('input[name="l1"]').value);
+        const l2 = parseInt(document.querySelector('input[name="l2"]').value);
+        let num = "";
+
+        // for(let i = l1; i <= l2; i++){
+        //     if(i%2 == 0){
+        //         num+= i + ", ";
+        //     }
+        // }
+        let i = l1;
+        while( i <= l2){
+
+            if(i%2 == 0){
+                num+= i + ", ";
+            }
+            i++
+        }
+        div.textContent= `Liczby z przedziału od ${l1} do ${l2} podzielne przez 2 to: ${num}`;
+    });
+</script>
+</body>
+</html>
+
+!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<form action="" method="GET">
+    <input type="number" name="liczba1" placeholder="Podaj liczbe 1"/>
+    <input type="number" name="liczba2" placeholder="Podaj liczbe 2"/>
+    <button type="submit">Oblicz</button>
+</form>
+<div class="srednia"></div>
+
+<script>
+    const form = document.querySelector('form');
+    const div = document.querySelector('.srednia');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const poczatek = parseInt(document.querySelector('input[name ="liczba1"]').value);
+        const iloscLiczb = parseInt(document.querySelector('input[name ="liczba2"]').value);
+        let suma = 0;
+
+        for (let i = poczatek; i <= poczatek + iloscLiczb; i++){
+            suma+= i;
+        }
+        let srednia = suma / iloscLiczb;
+        div.textContent = `Średnia ${iloscLiczb} liczb zaczynając od liczby ${poczatek} jest równa ${srednia.toFixed(2)}`;
+    });
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<form action="" method="GET">
+    <input type="number" name="liczba2" placeholder="Podaj liczbe 2"/>
+    <button type="submit">Oblicz</button>
+</form>
+<div></div>
+
+<script>
+    // Napisz program który policzy, ile liczb parzystych i nieparzystych jest w ciągu liczb w zakresie od 1 do n (n podaje użytkownik).
+    const form = document.querySelector('form');
+    const div = document.querySelector('div');
+
+    let liczbaParzysta = 0, liczbaNieparzysta = 0;
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const iloscLiczb = parseInt(document.querySelector('input[name ="liczba2"]').value);
+
+        for (let i = 1; i <= iloscLiczb; i++){
+            if(i%2 == 0){
+liczbaParzysta++;
+            }
+            else{
+liczbaNieparzysta++;
+            }
+        }
+        div.textContent = `Przedzial od 1 do ${iloscLiczb} zawiera ${liczbaParzysta} liczb parzystych i ${liczbaNieparzysta} liczb nieparzystych`;
+    });
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<form action="" method="GET">
+    <input type="number" name="liczba" placeholder="Podaj liczbe:"/>
+    <button type="submit">Oblicz</button>
+</form>
+<div></div>
+
+<script>
+    // Napisz program (3 wersje), który wczyta liczbę naturalną n i wypisze wszystkie naturalne dzielniki podanej liczby. W każdej wersji użyj innej pętli: for, while, do while.
+    const form = document.querySelector('form');
+    const div = document.querySelector('div');
+
+    let LICZBA = '';
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const MojaLiczba = parseInt(document.querySelector('input[name ="liczba"]').value);
+
+        // for (let i = MojaLiczba; i > 0; i--){
+        //     if(MojaLiczba%i == 0){
+        //         LICZBA= LICZBA + i + ", ";
+        //     }
+        // }
+
+
+
+
+        // let i = MojaLiczba
+        // while (i > 0){
+        //     if(MojaLiczba%i == 0){
+        //         LICZBA= LICZBA + i + ", ";
+        //     }
+        //     i--;
+        // }
+
+
+
+
+        let i = MojaLiczba
+        do{
+            if(MojaLiczba%i == 0){
+                LICZBA= LICZBA + i + ", ";
+            }
+            i--;
+        }while (i > 0);
+        div.textContent = `dzielniki liczby: ${MojaLiczba} ma dzielniki: ${LICZBA}`;
+    });
+</script>
+</body>
+</html> -->
