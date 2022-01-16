@@ -9,89 +9,129 @@
 
 <body>
     <script>
-        // zadanie 1
+
         // const liczba = prompt('Podaj liczbe: ');
         // if (liczba % 2 == 0) {
         //     document.write('Podana liczba jest parzysta!');
-        // } else {
+        // } 
+        // else {
         //     document.write('Podana liczba jest nieparzysta!');
         // }
 
-        //zadanie 2
-        // const liczba = parseInt(prompt('Podaj liczbe:'));
-        // if (liczba > 5 && liczba != 6 && liczba != 12 && liczba != 0) {
-        //     document.write('Spelnia warunek!');
-        // } else {
-        //     document.write('Nie spelnia!')
-        // }
-
-        //zadanie 3
-        // var dzien = prompt('Wprowadz liczbe: ');
-        // if (dzien == 1) {
-        //     document.write('Poniedziałek');
-        // }
-        // else if (dzien == 2) {
-        //     document.wite('Wtorek');
-        // }
-        // else if (dzien == 3) {
-        //     document.wite('Sroda');
-        // }
-        // else if (dzien == 4) {
-        //     document.wite('Czwartek');
-        // }
-        // else if (dzien == 5) {
-        //     document.write('Piątek')
-        // }
-        // else if (dzien == 6) {
-        //     document.write('Sobota')
-        // }
-        // else if (dzien == 7) {
-        //     document.write('Niedziela')
+        // const liczba = prompt('Podaj liczbe: ');
+        // if (liczba > 5 && liczba != 6 && liczba != 12 || liczba == 0) {
+        //     document.write('podana liczba spełnia warunek');
         // }
         // else {
-        //     document.write('Błędna liczba!')
+        //         document.write('Podana liczba nie spełnia warunku');
         // }
-                //zad 4
-        // const liczba = prompt('Wymyśl liczbę: ');
-        // const a = prompt('Wprowadź pierwszą liczbę przedziału: ');
-        // const b = prompt('Wprowadź drugą ostatnią liczbę przedziału');
 
-        // if (a > b) {
-        //     if (a >= liczba && b <= liczba) document.write('Liczba jest w tym przedziale!');
-        // } else {
-        //     document.write('Liczba nie jest w tym przedziale!');
-        // } else {
-        //     if (a < b) {
-        //         if (b >= liczba && a <= liczba) document.write('Liczba jest w  w przedziale!');
-        //     } else {
-        //         document.write('Liczba nie jest w przedziale!');
+        // const liczba = prompt('podaj liczbe: ');
+        // if(liczba == 1){
+        //     document.write('Poniedziałek');
+        // }
+        // else if(liczba == 2){
+        //     document.write('Wtorek');
+        // }
+        // else if(liczba == 3){
+        //     document.write('Środa');
+        // }
+        // else if(liczba == 4){
+        //     document.write('Czwartek');
+        // }
+        // else if(liczba == 5){
+        //     document.write('Piątek');
+        // }
+        // else if(liczba == 6){
+        //     document.write('Sobota');
+        // }
+        // else if(liczba == 7){
+        //     document.write('Niedziela');
+        // }
+        // else{
+        //     document.write('błąd')
+        // }
+
+        // const a = prompt('podawanie przedziału\npodaj liczbe a:');
+        // const b = prompt('podawanie przedziału\npodaj liczbe b:');
+        // const liczba = prompt('podaj liczbe: ');
+        // if (liczba >= a && liczba <= b) {
+        //     document.write('podana liczba jest z przedziału');
+        // }
+        // else if (liczba >= b && liczba <= a) {
+        //     document.write('podana liczba jest z przedzialu');
+        // }
+        // else {
+        //     document.write('podana liczba nie jest z przedziału');
+        // }
+
+        // const liczba1 = prompt('podaj 1 liczbe:');
+        // const liczba2 = prompt('podaj 2 liczbe:');
+        // const liczba3 = prompt('podaj 3 liczbe:');
+
+        // if(liczba1 >= liczba2 && liczba1 >= liczba3){
+        //     if(liczba2 >= liczba3){
+        //         document.write(liczba1, liczba2, liczba3);
         //     }
-        //     if (b >= liczba && a <= liczba) document.write('Liczba jest w przedziale');
-        // } else {
-        //     document.write('Liczba nie jest w tym przedziale!')
+        //     else {
+        //         document.write(liczba1, liczba3 , liczba2);
+        //     }
         // }
-        //zad 5 
-        // const liczby1 = prompt('Podaj 1 liczbę: ');
-        // const liczby2 = prompt('Podaj 3 liczbę: ');
-        // const liczby3 = prompt('Podaj 4 liczbę: ');
-
-        // if(liczba1<liczba2){
-
-
-
+        // else if(liczba2 >= liczba1 && liczba2 >= liczba3){
+        //     if(liczba1 >= liczba3){
+        //         document.write(liczba2, liczba1, liczba3);
+        //     }
+        //     else {
+        //         document.write(liczba2, liczba3 , liczba1);
+        //     }
+        // }
+        // else if(liczba3 >= liczba1 && liczba3 >= liczba2){
+        //     if(liczba2 >= liczba1){
+        //         document.write(liczba3, liczba2, liczba1);
+        //     }
+        //     else {
+        //         document.write(liczba3, liczba1 , liczba2);
+        //     }
         // }
 
-        //zad 6 
-        // const a = prompt('Podaj liczbę: ');
-        // const b = prompt('Podaj potęgę: ');
+        // const liczba1 = prompt('podaj liczbe a: ');
+        // const liczba2 = prompt('podaj liczbe b: ');
 
-        // if (a % b == 0) {
-        //     document.write('Jest podzielna!')
-        // } else if (a == 0) {
-        //     document.write('Nie wpiusjemy zera dzbanie!')
-        // } else {
-        //     document.write('Nie jest podzielna');
+        // if (liczba1 == 0 || liczba2 == 0) {
+        //     document.write('nie dzieli sie przez 0');
         // }
+        // else if (liczba1 % liczba2 == 0) {
+        //     document.write('liczba jest podzielna');
+        // }
+        // else {
+        //     document.write("liczba nie jest podzielna");
+        // }
+
+        // const liczba = prompt('1.dodawanie\n2.odejmnowanie\n3.mnożenie\n4.dzielenie\n\nPodaj liczbe:');
+        // var a = prompt('podaj liczbe a:');
+        // var b = prompt('podaj liczbe b:');
+        // var wynik;
+        // switch (liczba) {
+        //     case '1':
+        //         wynik = parseFloat(a) + parseFloat(b);
+        //         document.write(wynik);
+        //         break;
+        //     case '2':
+        //         wynik = parseFloat(a) - parseFloat(b);
+        //         document.write(wynik);
+        //         break;
+        //     case '3':
+        //         wynik = parseFloat(a) * parseFloat(b);
+        //         document.write(wynik);
+        //         break;
+        //     case '4':
+        //         wynik = parseFloat(a) / parseFloat(b);
+        //         document.write(wynik);
+        //         break;
+        // }
+
+        
+
 
     </script>
 </body>
