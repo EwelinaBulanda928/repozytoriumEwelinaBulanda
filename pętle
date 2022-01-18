@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<form>
+    <input type="form" name="h" placeholder="Podaj wysokość"/>
+    <input type="form" name="a" placeholder="Podaj szerokość"/>
+    <button type="submit">Wypisz</button>
+</form>
+<div class="liczby"></div>
+<script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const h = parseInt(document.querySelector('input[name = "h"]').value);
+        const a = parseInt(document.querySelector('input[name = "a"]').value);
+
+        for(let i = 0; i < h;i++){
+            document.write(`<div style="white-space:pre-wrap">`);
+                for(let j = 0; j < a; j++){
+                    if(i == 0 || i == h-1){
+                        document.write(`*`);
+                    } else{
+                        if(j == 0 || j == a-1){
+                            document.write(`*`);
+                        }else{
+                            document.write(`  `)
+                        }
+                    }
+                }
+            document.write(`</div>`)
+        }
+    });
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<form>
+    <input type="form" name="l1" placeholder="Podaj przedział"/>
+    <input type="form" name="l2" placeholder="Podaj przedział"/>
+    <button type="submit">Wypisz</button>
+</form>
+<div class="liczby"></div>
+<script>
+    const form = document.querySelector('form');
+    const div = document.querySelector('.liczby');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const l1 = parseInt(document.querySelector('input[name = "l1"]').value);
+        const l2 = parseInt(document.querySelector('input[name = "l2"]').value);
+        let liczby = "";
+
+        for(let i=l1; i < l2; i++){
+            if(i%5 == 0){
+                liczby+= i + ", ";
+            }
+
+        }
+        div.textContent= `Liczby z przedziału od ${l1} do ${l2} podzielne przez 5 to: ${liczby}`;
+        
+    });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
